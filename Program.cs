@@ -62,7 +62,10 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-app.UseHttpsRedirection();
+// ВАЖНО: Коментираме HTTPS пренасочването за development с физическо устройство.
+// При production разкоментирайте реда по-долу и ползвайте валиден SSL сертификат.
+// app.UseHttpsRedirection();
+
 app.UseCors("AllowAll");
 app.UseAuthorization();
 app.MapControllers();
